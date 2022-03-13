@@ -3,7 +3,7 @@ function compute() {
 
     const principalElement = document.getElementById("principal");
     const principal = parseFloat(principalElement.value);
-    if (principal <= 0) {
+    if (principal <= 0 || !Number.isFinite(principal)) {
         alert( "Enter a positive number")
         principalElement.focus()
         return
